@@ -1,24 +1,6 @@
-def anagram(s):
-    slist = []
-    for ch in s.lower():
-        slist.append(ch)
-
-    sdict = {}
-    for ch in slist:
-        if ch not in sdict:
-            sdict[ch] = 1
-        else:
-            sdict[ch] = sdict[ch] + 1
-
-    return sdict
-
-s1 = str(input("Enter the first string:"))
-s2 = str(input("Enter the second string:"))
-
-a = anagram(s1)
-b = anagram(s2)
-
-if a == b:
-    print (s1, "and", s2, "are Anagram")
+s1=raw_input("Enter first string:")
+s2=raw_input("Enter second string:")
+if(sorted(s1)==sorted(s2)):
+      print("The strings are anagrams.")
 else:
-    print("Not Anagram")
+      print("The strings aren't anagrams.")
